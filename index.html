@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header class="header-area">
+		<div class="navbar-area">
+			<div class="container">
+				<nav class="site-navbar">
+					<a href="#" class="site-logo">ninja</a>
+					<ul>
+						<li><a href="#">home</a></li>
+						<li><a href="#">service</a></li>
+						<li><a href="#">contact</a></li>
+						<li><a href="#">about</a></li>
+					</ul>
+					<button class="nav-toggler">
+						<span></span>
+					</button>
+				</nav>
+			</div>
+		</div>
+		<div class="into-area">
+			<div class="main">
+				<a href="#" class="text"><img src="1.png" style="width: 100%"></a>
+				<a href="#" class="text"><img src="2.png" style="width: 100%"></a>
+				<a href="#" class="text"><img src="5.png" style="width: 100%"></a>
+				<a href="#" class="text"><img src="7.png" style="width: 100%"></a>
+				<a href="#" class="text"><img src="8.png" style="width: 100%"></a>
+
+
+			</div>
+		</div>
+	</header>
+	<script>
+		const navToggler = document.querySelector('.nav-toggler');
+		const navMenu = document.querySelector('.site-navbar ul');
+		const navLinks = document.querySelectorAll('.site-navbar a');
+
+		allEventListners();
+
+		function allEventListners(){
+			navToggler.addEventListener('click', togglerClick);
+			navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+		}
+
+		function togglerClick(){
+			navToggler.classList.toggle('toggler-open');
+			navMenu.classList.toggle('open');
+		}
+
+		function navLinkClick(){
+			if(navMenu.classList.contains('open')){
+				navToggler.click();
+			}
+		}
+	</script>
+	<script src='http://use.edgefonts.net/nosifer.js'></script>
+</body>
+</html>
